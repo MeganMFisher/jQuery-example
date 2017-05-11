@@ -16,6 +16,10 @@ nav div {
     font-family: Arial;
 }
 
+#main-section {
+    display:none;
+}
+
 .boxContainer {
     display: flex;
     justify-content: space-around;
@@ -40,6 +44,15 @@ nav div {
     width: 200px;
     height: 200px;
     background: darkgreen;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.greenBox p {
+    font-size: 24px;
+    font-family: Arial;
+    color: white;
 }
 
 .purpleBox {
@@ -52,4 +65,13 @@ nav div {
     width: 200px;
     height: 200px;
     background: #222;
+}
+
+.tealBox {
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+    margin-left: 100px;
+    background: teal;
+    position: absolute;
 }

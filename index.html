@@ -6,28 +6,56 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="reset.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     </head>
     <body>
 
         <nav>
             <div>
-                <a>HOME</a>
-                <a>ABOUT</a>
-                <a>STORE</a>
-                <a>CONTACT</a>
+                <button>Click Me!</button>
             </div>
         </nav>
+
+        <section id='main-section'>
 
         <div class='boxContainer'>
             <div class='blueBox'></div>
             <div class='redBox'></div>
-            <div class='greenBox'></div>
+            <div class='greenBox'>
+                <p>GREEN</p>
+            </div>
             <div class='purpleBox'></div>
             <div class='blackBox'></div>
         </div>
     
+        <div class='tealBox'></div>
 
+        </section>
+    
 
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#main-section").fadeToggle();
+                // $("#main-section").fadeToggle("slow");
+                // $("#main-section").fadeToggle(3000);
+            });
+            $(".blueBox").click(function(){
+                $(this).hide();
+            });
+            $(".redBox").mouseenter(function(){
+                $(this).css('background-color', '#ff0');
+            });
+            $(".greenBox").click(function(){
+                $("p").fadeToggle();
+                $("p").fadeToggle("slow");
+                $("p").fadeToggle(2000);
+            });
+            $(".purpleBox").click(function(){
+                 $(this).animate({down: '250px'});
+            });
+        });
+</script>
+
     </body>
 </html>
