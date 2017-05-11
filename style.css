@@ -15,3 +15,41 @@ nav div {
     color: white;
     font-family: Arial;
 }
+
+.boxContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 100px;
+}
+
+.blueBox {
+    width: 200px;
+    height: 200px;
+    background: darkblue;
+}
+
+.redBox {
+    width: 200px;
+    height: 200px;
+    background: maroon;
+}
+
+.greenBox {
+    width: 200px;
+    height: 200px;
+    background: darkgreen;
+}
+
+.purpleBox {
+    width: 200px;
+    height: 200px;
+    background: purple;
+}
+
+.blackBox {
+    width: 200px;
+    height: 200px;
+    background: #222;
+}
