@@ -12,7 +12,7 @@
 
         <nav>
             <div>
-                <button>Click Me!</button>
+                <button id='button1'>Click Me!</button>
             </div>
         </nav>
 
@@ -27,6 +27,8 @@
             <div class='purpleBox'></div>
             <div class='blackBox'></div>
         </div>
+
+        <button id='button2'>Animate Me!</button>
     
         <div class='tealBox'></div>
 
@@ -35,7 +37,7 @@
 
     <script>
         $(document).ready(function(){
-            $("button").click(function(){
+            $("#button1").click(function(){
                 $("#main-section").fadeToggle();
                 // $("#main-section").fadeToggle("slow");
                 // $("#main-section").fadeToggle(3000);
@@ -46,14 +48,22 @@
             $(".redBox").mouseenter(function(){
                 $(this).css('background-color', '#ff0');
             });
+            $(".redBox").mouseleave(function(){
+                $(this).css('background-color', 'maroon');
+            });
             $(".greenBox").click(function(){
                 $("p").fadeToggle();
                 $("p").fadeToggle("slow");
                 $("p").fadeToggle(2000);
             });
-            $(".purpleBox").click(function(){
-                 $(this).animate({down: '250px'});
-            });
+            $("#button2").click(function(){
+                $(".tealBox").animate({
+                    left: '450px',
+                    opacity: '0.5',
+                    height: '250px',
+                    width: '250px',
+                });
+             });
         });
 </script>
 
